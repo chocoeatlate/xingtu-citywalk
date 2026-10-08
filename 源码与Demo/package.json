@@ -1,0 +1,33 @@
+{
+  "name": "xingtu-citywalk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc -b && vite build && node scripts/offline.mjs",
+    "preview": "node server/index.mjs",
+    "test": "vitest run --dir src && node --test server/geo.test.mjs server/http.test.mjs",
+    "package": "npm run build && node scripts/package.mjs && node scripts/verify-package.mjs",
+    "check": "npm test && npm run build && node scripts/verify-offline.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

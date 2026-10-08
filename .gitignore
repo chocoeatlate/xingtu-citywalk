@@ -1,0 +1,31 @@
+# Competition materials stay local.
+/参赛材料/
+
+# Dependencies and generated output.
+**/node_modules/
+**/dist/
+**/coverage/
+**/.vite/
+**/.cache/
+*.tsbuildinfo
+*.log
+
+# Local credentials; keep the configuration example.
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+
+# Local work files and archives.
+/.hosting/
+/.verification/
+/.deck-build/
+/.*-finalizer/
+*.zip
+*.tar.gz
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
